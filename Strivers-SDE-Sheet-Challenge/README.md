@@ -36,3 +36,22 @@ Contributions to this repository are more than welcome! If you have any improvem
 To get started with the Striver 180 DSA Sheet, follow these steps:
 
 1. Clone the repository to your local machine using the following command:
+
+2. Navigate to the relevant folder to explore the solutions.
+
+3. Read the problem statement and code explanation to understand the solution.
+
+4. If you have a better solution or any suggestions, make your changes and submit a pull request.
+
+## Support
+
+If you find this repository helpful or have any questions, feel free to raise an issue or contact me via email at niteshmeena9672@gmail.com
+
+## Acknowledgments
+
+I would like to express my gratitude to Striver for creating this amazing DSA sheet.
+
+---
+
+Happy Coding! 😄
+
