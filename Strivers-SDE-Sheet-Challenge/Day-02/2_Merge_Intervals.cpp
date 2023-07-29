@@ -1,33 +1,39 @@
-#include <bits/stdc++.h> 
-/*
+#include <bits/stdc++.h>
+using namespace std;
 
-    intervals[i][0] = start point of i'th interval
-    intervals[i][1] = finish point of i'th interval
+vector<vector<int>> mergeOverlappingIntervals(vector<vector<int>> &arr) {
+    int n = arr.size(); // size of the array
 
-*/
+    // Sort the given intervals based on their starting values.
+    sort(arr.begin(), arr.end());
 
-vector<vector<int>> mergeIntervals(vector<vector<int>> &intervals)
+    vector<vector<int>> ans; // Vector to store the merged intervals.
+
+    for (int i = 0; i < n; i++) {
+        // If the current interval does not
+        // overlap with the last interval in the answer vector,
+        // we can directly add it to the answer.
+        // (Or if the answer vector is empty, we add the first interval.)
+        if (ans.empty() || arr[i][0] > ans.back()[1]) {
+            ans.push_back(arr[i]);
+        }
+        // If the current interval overlaps with the last interval,
+        // we can merge them by updating the end of the last interval.
+        else {
+            ans.back()[1] = max(ans.back()[1], arr[i][1]);
+        }
+    }
+    return ans;
+}
+
+int main()
 {
-    if(intervals.size() <= 1)
-            return intervals;
-
-    // Sort the intervals based on the first element of each sub-interval
-    sort(intervals.begin(), intervals.end(), [](vector<int> a, vector<int> b)
-    {
-        return a[0] < b[0];
+    vector<vector<int>> arr = {{1, 3}, {8, 10}, {2, 6}, {15, 18}};
+    vector<vector<int>> ans = mergeOverlappingIntervals(arr);
+    cout << "The merged intervals are: " << "\n";
+    for (auto it : ans) {
+        cout << "[" << it[0] << ", " << it[1] << "] ";
     }
-    );
-
-    vector<vector<int>> res;
-    int n = intervals.size();
-
-    for(int i=0; i<n; i++)
-    {
-        if(res.size() && intervals[i][0] <= res.back()[1])
-            res.back()[1] = max(res.back()[1], intervals[i][1]);
-        else
-            res.push_back(intervals[i]);
-    }
-
-    return res;
+    cout << endl;
+    return 0;
 }
