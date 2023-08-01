@@ -43,9 +43,16 @@ public:
         return ans;
     }
 };
-// The naive approach calculates the power of 'x' by multiplying 'x' by itself 'n' times. This approach has a time complexity of O(n) since it performs 'n' multiplications. It handles negative exponents by taking the reciprocal of 'x' and converting 'n' to a positive number before the multiplication loop.
+// This code implements the binary exponentiation (fast power) algorithm to calculate the power of 'x' raised to 'n'. The algorithm is optimized for efficiency, even for large values of 'n'.
 
-// While the naive approach is straightforward, it may not be efficient for large values of 'n'. The binary exponentiation algorithm in the previous optimized code takes O(log n) time and is a more efficient approach for calculating the power of 'x' raised to 'n', especially for larger values of 'n'.
+// The binary exponentiation algorithm works by reducing the number of multiplication operations needed to calculate the power. Instead of naively multiplying 'x' with itself 'n' times, it uses the binary representation of 'n' to break down the calculation into a sequence of squaring 'x' and halving 'n'. This results in a time complexity of O(log n) for the power calculation.
+
+// The algorithm handles negative exponents by converting them to positive exponents and then taking the reciprocal of the final answer if necessary.
+
+
+
+
+
 
 
 
