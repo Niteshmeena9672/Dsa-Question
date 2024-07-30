@@ -64,7 +64,7 @@ void markCol(vector<vector<int>> &matrix, int n, int m, int j) {
     }
 }
 
-// to make the matrix 0
+// to make the matrix 0 jflkdslka
 vector<vector<int>> zeroMatrix(vector<vector<int>> &matrix, int n, int m) {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
