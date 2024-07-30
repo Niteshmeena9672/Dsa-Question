@@ -46,6 +46,7 @@ Since matrix[0][0] = 0 and matrix[0][3] = 0, the 1st row, 1st column, and 4th co
 #include <bits/stdc++.h>
 using namespace std;
 
+//to mark the row
 void markRow(vector<vector<int>> &matrix, int n, int m, int i) {
     for (int j = 0; j < m; j++) {
         if (matrix[i][j] != 0) {
@@ -54,6 +55,7 @@ void markRow(vector<vector<int>> &matrix, int n, int m, int i) {
     }
 }
 
+//to mark the column
 void markCol(vector<vector<int>> &matrix, int n, int m, int j) {
     for (int i = 0; i < n; i++) {
         if (matrix[i][j] != 0) {
@@ -62,6 +64,7 @@ void markCol(vector<vector<int>> &matrix, int n, int m, int j) {
     }
 }
 
+// to make the matrix 0
 vector<vector<int>> zeroMatrix(vector<vector<int>> &matrix, int n, int m) {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
