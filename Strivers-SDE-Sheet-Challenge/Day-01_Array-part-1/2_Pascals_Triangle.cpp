@@ -1,4 +1,9 @@
 #include <bits/stdc++.h>
+#include <vector>
+
+vector<int> generateRow(int row) {
+    
+}
 
 vector<vector<long long int>> printPascal(int n) 
 {
