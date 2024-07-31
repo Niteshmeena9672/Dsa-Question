@@ -55,15 +55,15 @@ See it's prefix sum array approach. We can solve this problem in O(n) time compl
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
-        int maximum = nums[0];
+        int maxi = INT_MIN;
         int sum = 0;
         for(int i = 0; i < nums.size(); i++) {
             sum += nums[i];
-            maximum = max(sum, maximum);
+            maxi = max(sum, maxi);
             if (sum < 0) {
                 sum = 0;
             }
         }
-        return maximum;
+        return maxi;
     }
 };
