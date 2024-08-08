@@ -2,9 +2,9 @@
 
 int getAnchorIndex(vector<int> permutation)
 {
-    for(int i=permutation.size()-1; i>=1; i--)
-        if(permutation[i-1] < permutation[i])
-            return i-1;
+    for(int i=permutation.size()-2; i>=0; i--)
+        if(permutation[i] < permutation[i+1])
+            return i;
 
     return -1;
 }
